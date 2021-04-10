@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.takumakei.example1</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>KeepAlive</key>
+  <false/>
+
+  <key>UserName</key>
+  <string>daemon</string>
+
+  <key>GroupName</key>
+  <string>daemon</string>
+
+  <key>StandardOutPath</key>
+    <string>/var/log/example1/stdout.log</string>
+
+  <key>StandardErrorPath</key>
+    <string>/var/log/example1/stderr.log</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/example1</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HELLO</key>
+    <string>WORLD</string>
+  </dict>
+
+  <key>Sockets</key>
+  <dict>
+    <key>MySocketName</key>
+    <array>
+      <dict>
+        <key>SockNodeName</key>
+        <string>127.0.0.1</string>
+        <key>SockServiceName</key>
+        <string>13232</string>
+      </dict>
+
+      <dict>
+        <key>SockNodeName</key>
+        <string>127.0.0.1</string>
+        <key>SockServiceName</key>
+        <string>13233</string>
+      </dict>
+    </array>
+  </dict>
+
+</dict>
+</plist>
